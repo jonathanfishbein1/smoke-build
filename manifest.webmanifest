@@ -1,0 +1,12 @@
+{
+  "name": "Invaders",
+  "short_name": "Invaders",
+  "id": "com.hosky",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
