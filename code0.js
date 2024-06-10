@@ -1233,12 +1233,13 @@ gdjs.copyArray(runtimeScene.getObjects("ScoreNUM"), gdjs.Phase1Code.GDScoreNUMOb
 gdjs.Phase1Code.mapOfGDgdjs_9546Phase1Code_9546GDInvader1Objects2ObjectsGDgdjs_9546Phase1Code_9546GDInvader2Objects2ObjectsGDgdjs_9546Phase1Code_9546GDInvader3Objects2Objects = Hashtable.newFrom({"Invader1": gdjs.Phase1Code.GDInvader1Objects2, "Invader2": gdjs.Phase1Code.GDInvader2Objects2, "Invader3": gdjs.Phase1Code.GDInvader3Objects2});
 gdjs.Phase1Code.mapOfGDgdjs_9546Phase1Code_9546GDShipObjects2Objects = Hashtable.newFrom({"Ship": gdjs.Phase1Code.GDShipObjects2});
 gdjs.Phase1Code.mapOfGDgdjs_9546Phase1Code_9546GDBombObjects2Objects = Hashtable.newFrom({"Bomb": gdjs.Phase1Code.GDBombObjects2});
-gdjs.Phase1Code.asyncCallback9850500 = function (runtimeScene, asyncObjectsList) {
+gdjs.Phase1Code.asyncCallback9671132 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(asyncObjectsList.getObjects("Ship"), gdjs.Phase1Code.GDShipObjects2);
 
 {for(var i = 0, len = gdjs.Phase1Code.GDShipObjects2.length ;i < len;++i) {
     gdjs.Phase1Code.GDShipObjects2[i].getBehavior("Animation").setAnimationIndex(0);
 }
+}{gdjs.evtTools.sound.playSound(runtimeScene, "assets/ES_Human_Cough_16.mp3", false, 100, 1);
 }}
 gdjs.Phase1Code.eventsList25 = function(runtimeScene) {
 
@@ -1249,7 +1250,7 @@ gdjs.Phase1Code.eventsList25 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 for (const obj of gdjs.Phase1Code.GDShipObjects1) asyncObjectsList.addObject("Ship", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Phase1Code.asyncCallback9850500(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Phase1Code.asyncCallback9671132(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -1332,7 +1333,7 @@ gdjs.copyArray(gdjs.Phase1Code.GDShipObjects1_1final, gdjs.Phase1Code.GDShipObje
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9849740);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9670372);
 }
 }
 if (isConditionTrue_0) {
@@ -1349,7 +1350,7 @@ gdjs.Phase1Code.eventsList25(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.Phase1Code.userFunc0x92b3d8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.Phase1Code.userFunc0x87b848 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log('here')
 console.log('runtimeScene ', runtimeScene)
@@ -1367,7 +1368,7 @@ gdjs.Phase1Code.eventsList27 = function(runtimeScene) {
 {
 
 
-gdjs.Phase1Code.userFunc0x92b3d8(runtimeScene);
+gdjs.Phase1Code.userFunc0x87b848(runtimeScene);
 
 }
 
@@ -1445,7 +1446,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 0;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9851348);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9670908);
 }
 }
 if (isConditionTrue_0) {
