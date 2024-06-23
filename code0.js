@@ -1,4 +1,5 @@
 gdjs.Phase1Code = {};
+gdjs.Phase1Code.localVariables = [];
 gdjs.Phase1Code.GDBombObjects1_1final = [];
 
 gdjs.Phase1Code.GDInvader1Objects1_1final = [];
@@ -1233,7 +1234,8 @@ gdjs.copyArray(runtimeScene.getObjects("ScoreNUM"), gdjs.Phase1Code.GDScoreNUMOb
 gdjs.Phase1Code.mapOfGDgdjs_9546Phase1Code_9546GDInvader1Objects2ObjectsGDgdjs_9546Phase1Code_9546GDInvader2Objects2ObjectsGDgdjs_9546Phase1Code_9546GDInvader3Objects2Objects = Hashtable.newFrom({"Invader1": gdjs.Phase1Code.GDInvader1Objects2, "Invader2": gdjs.Phase1Code.GDInvader2Objects2, "Invader3": gdjs.Phase1Code.GDInvader3Objects2});
 gdjs.Phase1Code.mapOfGDgdjs_9546Phase1Code_9546GDShipObjects2Objects = Hashtable.newFrom({"Ship": gdjs.Phase1Code.GDShipObjects2});
 gdjs.Phase1Code.mapOfGDgdjs_9546Phase1Code_9546GDBombObjects2Objects = Hashtable.newFrom({"Bomb": gdjs.Phase1Code.GDBombObjects2});
-gdjs.Phase1Code.asyncCallback15430804 = function (runtimeScene, asyncObjectsList) {
+gdjs.Phase1Code.asyncCallback9767860 = function (runtimeScene, asyncObjectsList) {
+asyncObjectsList.restoreLocalVariablesContainers(gdjs.Phase1Code.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Ship"), gdjs.Phase1Code.GDShipObjects2);
 
 {for(var i = 0, len = gdjs.Phase1Code.GDShipObjects2.length ;i < len;++i) {
@@ -1249,8 +1251,9 @@ gdjs.Phase1Code.eventsList25 = function(runtimeScene) {
 {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
+asyncObjectsList.backupLocalVariablesContainers(gdjs.Phase1Code.localVariables);
 for (const obj of gdjs.Phase1Code.GDShipObjects1) asyncObjectsList.addObject("Ship", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Phase1Code.asyncCallback15430804(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.Phase1Code.asyncCallback9767860(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -1333,7 +1336,7 @@ gdjs.copyArray(gdjs.Phase1Code.GDShipObjects1_1final, gdjs.Phase1Code.GDShipObje
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(15428228);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9768116);
 }
 }
 if (isConditionTrue_0) {
@@ -1350,7 +1353,7 @@ gdjs.Phase1Code.eventsList25(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.Phase1Code.userFunc0x8646e0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.Phase1Code.userFunc0x894328 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log('here')
 console.log('runtimeScene ', runtimeScene)
@@ -1361,7 +1364,7 @@ const parentWindow = window.parent
 console.log('window ', window)
 console.log('parentWindow ', parentWindow)
 const data = {
-    url: runtimeScene._variables._variables.items.score
+    url: runtimeScene._variables._variables.items.Score._value
 }
 parentWindow.postMessage(data, '*')
 };
@@ -1370,7 +1373,7 @@ gdjs.Phase1Code.eventsList27 = function(runtimeScene) {
 {
 
 
-gdjs.Phase1Code.userFunc0x8646e0(runtimeScene);
+gdjs.Phase1Code.userFunc0x894328(runtimeScene);
 
 }
 
@@ -1448,7 +1451,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 0;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(15430244);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9769860);
 }
 }
 if (isConditionTrue_0) {

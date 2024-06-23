@@ -1,4 +1,5 @@
 gdjs.TitleCode = {};
+gdjs.TitleCode.localVariables = [];
 gdjs.TitleCode.GDBackgroundObjects1= [];
 gdjs.TitleCode.GDBackgroundObjects2= [];
 gdjs.TitleCode.GDTitleObjects1= [];
