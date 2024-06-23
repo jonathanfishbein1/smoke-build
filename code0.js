@@ -1350,11 +1350,13 @@ gdjs.Phase1Code.eventsList25(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.Phase1Code.userFunc0x95fa30 = function GDJSInlineCode(runtimeScene) {
+};gdjs.Phase1Code.userFunc0x8646e0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log('here')
 console.log('runtimeScene ', runtimeScene)
-console.log('runtimeScene.game_over ', runtimeScene._variables._variables.items.score)
+console.log('runtimeScene._variables._variables ', runtimeScene._variables._variables)
+console.log('runtimeScene._variables._variables.items ', runtimeScene._variables._variables.items)
+console.log('runtimeScene._variables._variables.items.Score._value ', runtimeScene._variables._variables.items.Score._value)
 const parentWindow = window.parent
 console.log('window ', window)
 console.log('parentWindow ', parentWindow)
@@ -1368,7 +1370,7 @@ gdjs.Phase1Code.eventsList27 = function(runtimeScene) {
 {
 
 
-gdjs.Phase1Code.userFunc0x95fa30(runtimeScene);
+gdjs.Phase1Code.userFunc0x8646e0(runtimeScene);
 
 }
 
