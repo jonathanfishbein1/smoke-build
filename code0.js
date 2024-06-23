@@ -1353,7 +1353,7 @@ gdjs.Phase1Code.eventsList25(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.Phase1Code.userFunc0x894328 = function GDJSInlineCode(runtimeScene) {
+};gdjs.Phase1Code.userFunc0x91a9d0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 console.log('here')
 console.log('runtimeScene ', runtimeScene)
@@ -1373,7 +1373,7 @@ gdjs.Phase1Code.eventsList27 = function(runtimeScene) {
 {
 
 
-gdjs.Phase1Code.userFunc0x894328(runtimeScene);
+gdjs.Phase1Code.userFunc0x91a9d0(runtimeScene);
 
 }
 
